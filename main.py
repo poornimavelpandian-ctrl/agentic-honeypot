@@ -2,6 +2,9 @@ from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
 
 app = FastAPI(title="Agentic Honeypot API")
+@app.get("/")
+def root():
+    return {"status": "Agentic Honeypot API is running"}
 
 API_KEY = "test123"
 
